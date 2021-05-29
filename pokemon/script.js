@@ -283,7 +283,7 @@ let app = new Vue({
 
 function myFunction() {
   var txt;
-  var person = prompt("Please enter your name:", "Harry Potter");
+  var person = prompt("Please enter your name :", "Your Name");
   if (person == null || person == "") {
     person = "FP";
     return person;
