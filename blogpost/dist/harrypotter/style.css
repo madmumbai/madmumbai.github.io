@@ -124,7 +124,8 @@ p {
  
   line-height: 1.4;
   margin: 0;
-  font-family: fantasy;
+  font-family: georgia;
+  font-weight:700;
 }
 
 .pullquote {
