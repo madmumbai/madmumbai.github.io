@@ -1,0 +1,149 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-image: url(https://i.imgur.com/DNz1Fwq.png);
+  background-repeat: repeat-x;
+  overflow: hidden;
+  background-position: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes roller {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 200vh;
+  }
+}
+.newspaper {
+  width: 65vw;
+  height: 50vw;
+  background: linear-gradient(135deg, #efefef 0%, white 17%, white 49%, lightgray 73%, #ededed 89%, #bcbcbc 100%);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 15% 24% auto;
+  color: #2a2d2f;
+  box-shadow: 4px 4px 0 #cccccc, 8px 8px 0 #999999, 12px 12px 0 #666666, 0 0 20px rgba(0, 0, 0, 0.5);
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ();
+  will-change: transform;
+  position: absolute;
+  z-index: 3;
+  transform: rotate(8deg);
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@media screen and (max-width: 1200px) {
+  .newspaper {
+     /* do what you want here */
+     width: 90vw;
+     height: 70vw;
+  }
+  p{
+    font-size: 1.8vw;
+    margin: 0;
+  
+  }
+}
+.newspaper.playing {
+  animation-name: paper-spin;
+}
+
+@keyframes paper-spin {
+  from {
+    transform: rotate(-1880deg) scale(0.3) translateZ(0);
+    filter: blur(15px);
+  }
+  to {
+    transform: rotate(8deg) scale(1) translateZ(0);
+  }
+}
+.title {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 4px solid #2a2d2f;
+}
+
+.headline {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+.coverimage {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  padding: 0 0.5rem;
+}
+.coverimage img {
+  width: 100%;
+  height: 28vw;
+  object-fit: cover;
+}
+
+.copy {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  column-count: 2;
+  padding: 1vw;
+}
+
+h1 {
+  font-family: "Pirata One", cursive;
+  font-size: 4.8vw;
+  margin: 0;
+}
+
+h2 {
+  font-family: "Merriweather", serif;
+  text-transform: uppercase;
+  font-size: 3.6vw;
+  margin: 0;
+  text-align: center;
+  line-height: 1.1;
+}
+
+p {
+ 
+  line-height: 1.4;
+  margin: 0;
+  font-family: fantasy;
+}
+
+.pullquote {
+  font-size: 1.2vw;
+  border-top: 0.2vw solid #2a2d2f;
+  border-bottom: 0.2vw solid #2a2d2f;
+  margin: 1vw 0;
+  padding: 1vw 0;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  position: absolute;
+  bottom: 1em;
+  right: 1rem;
+  z-index: 4;
+  background: #0b310a;
+  color: white;
+  border: 1px solid white;
+  font-size: 1.2rem;
+  font-family: "Merriweather", serif;
+}

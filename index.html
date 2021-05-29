@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CodePen - Animated Navbar using Flex and clip-path</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=1024">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="nav.css" />
+        <title>Responsive Animated Navbar</title>
+    </head>
+
+    <body>
+        <nav>
+
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="login-button">Home</a></li>
+                <li><a href="dream team/index.html" class="login-button">Dream Team</a></li>
+                <li><a href="blogpost/dist/index.html" class="login-button">Milestones</a></li>
+                <li><a href="words/words.html" class="login-button">Word Cloud</a></li>
+
+
+            </ul>
+        </nav>
+        <script src="nav.js"></script>
+
+
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="responsive-iframe" src="pokemon/index.html" title="Iframe Example" style="border:none; "
+                frameBorder="0" allowfullscreen></iframe>
+        </div>
+
+        <style>
+            .container {
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+                padding-top: 100%;
+                
+                /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+            }
+
+            /* Then style the iframe to fit in the container div with full height and width */
+            .responsive-iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 50;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+
+            @media screen and (max-width: 550px) {
+                .responsive-iframe {
+                    max-width: 100% !important;
+                    width: 100% !important;
+                    height: 100%;
+                }
+            }
+        </style>
+
+    </body>
+
+    </html>
+    <!-- partial -->
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
